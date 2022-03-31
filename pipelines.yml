@@ -1,7 +1,12 @@
 template: true   # required for local templates
 valuesFilePath: ./values.yml
 
-resources:      
+resources: 
+  - name: app_promoted_buildinfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: {{ .Values.artifactoryIntegration }}
+
   - name: release_bundle
     type: ReleaseBundle
     configuration:
