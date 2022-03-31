@@ -7,7 +7,7 @@ resources:
     configuration:
       # sourceArtifactory: myArtifactory
       sourceArtifactory: {{ .Values.artifactoryIntegration }}
-      buildName: svc_build
+      buildName: dbp_build
       buildNumber: 1    
 
   - name: release_bundle
@@ -71,8 +71,7 @@ pipelines:
       - name: distribute
         type: DistributeReleaseBundle
         configuration:
-          # dryRun: false
-          dryRun: true
+          dryRun: false
           inputResources:
             - name: signed_bundle
             - name: distribution_rules 
