@@ -8,7 +8,7 @@ resources:
       # sourceArtifactory: Artifactory_integration_dist
       sourceArtifactory: {{ .Values.artifactoryIntegration }}
       buildName: dbp_build
-      buildNumber: 1    
+      buildNumber: 30    
 
   - name: release_bundle
     type: ReleaseBundle
@@ -47,7 +47,7 @@ pipelines:
           releaseBundleVersion: v1.0.${run_number}
           dryRun: false
           sign: false
-          description: "some random test description"
+          description: "Automate Release Bundle creation and distribution"
           inputResources:
             - name: gosvc_promoted_build_info
               trigger: false
@@ -56,9 +56,10 @@ pipelines:
           releaseNotes:
             syntax: markdown
             content: |
-              ## Heading
-                * Bullet
-                * Points
+              ## Test Release bundle Automation
+                * Tesung Release Bundle creation through pipeline
+                * Signing RB
+                * Distribute Release Bundle
 
       - name: sign
         type: SignReleaseBundle
