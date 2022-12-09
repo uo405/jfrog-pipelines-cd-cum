@@ -32,10 +32,10 @@ resources:
       #sourceDistribution: Distribution_integration
       sourceDistribution:  {{ .Values.distributionIntegration }}
       serviceName: "*"
-      siteName: "*"
+      siteName: "edge"
       cityName: "*"
       countryCodes:
-        - "*"     
+        - "US"     
 
 pipelines:
   - name: cd_demo_release_mgmt
