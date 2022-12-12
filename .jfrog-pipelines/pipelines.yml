@@ -7,7 +7,7 @@ resources:
     configuration:
       #sourceArtifactory: Artifactory_integration_dist
       sourceArtifactory: {{ .Values.artifactoryIntegration }}
-      buildName: pipeline_dbp                                    # Name of the Build repo fro we are going to look for the build info for creating the RB
+      buildName: pipeline_dbp                                    # Name of the Build repo from we are going to look for the build info for creating the RB
       buildNumber: 30    
 
   - name: release_bundle
@@ -32,7 +32,7 @@ resources:
       #sourceDistribution: Distribution_integration
       sourceDistribution:  {{ .Values.distributionIntegration }}
       serviceName: "*"
-      siteName: "*"
+      siteName: "cumminspocus"
       cityName: "*"
       countryCodes:
         - "*"     
