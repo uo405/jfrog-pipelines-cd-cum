@@ -7,7 +7,7 @@ resources:
     configuration:
       sourceArtifactory: Artifactory_integration_dist
       #sourceArtifactory: {{ .Values.artifactoryIntegration }}
-      buildName: dbp_build
+      buildName: pipeline_dbp
       buildNumber: 30    
 
   - name: release_bundle
