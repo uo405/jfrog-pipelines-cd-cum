@@ -38,7 +38,7 @@ resources:
         - "*"     
 
 pipelines:
-  - name: cd_demo_release_mgmt
+  - name: cd_demo_release_build
     steps:
       - name: bundle
         type: CreateReleaseBundle
