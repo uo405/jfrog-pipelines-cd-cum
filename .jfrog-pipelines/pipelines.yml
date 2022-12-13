@@ -8,7 +8,7 @@ resources:
       #sourceArtifactory: Artifactory_integration_dist
       sourceArtifactory: {{ .Values.artifactoryIntegration }}
       buildName: demo_pipeline_build                                    # Name of the Build repo from where we are going to look for the build info for creating the RB
-      buildNumber: 1    
+      buildNumber: 4    
 
   - name: release_bundle
     type: ReleaseBundle
